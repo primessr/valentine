@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine? ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Will you be my Valentine? 💖</h1>
+    <p id="message">No pressure… just honesty 💫</p>
+
+    <div class="buttons">
+      <a href="yes.html" class="btn yes">Yes 💘</a>
+      <button class="btn no" id="noBtn">No 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const msg = document.getElementById("message");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 300 - 150;
+      const y = Math.random() * 300 - 150;
+
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+      msg.innerText = "Please click YES 💖🥺";
+    });
+  </script>
+</body>
+</html>
